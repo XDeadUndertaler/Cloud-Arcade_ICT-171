@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number | CloudArcade</title>
+  <link rel="stylesheet" href="../css/guess_the_number.css" />
+</head>
+<body>
+  <!-- Floating background -->
+  <div class="background-shapes" id="floatingShapes"></div>
+
+  <div class="container">
+    <h1>🔢 Guess the Number 🔢</h1>
+
+    <!-- Mode Selection -->
+    <div id="modeSelect">
+      <h3>Select Game Mode</h3>
+      <button id="basicMode">🧩 Basic Mode (10 Attempts)</button>
+      <button id="challengeMode">⚡ Challenge Mode (30s Timer)</button>
+    </div>
+
+    <!-- Game Area -->
+    <div id="gameArea" style="display:none;">
+      <p class="instructions" id="instructionsText"></p>
+
+      <div class="game-area">
+        <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="100">
+        <button id="submitGuess">Submit Guess</button>
+      </div>
+
+      <p id="feedback"></p>
+      <p id="status"></p>
+      <p id="attemptText">Attempts left: <span id="attempts">10</span></p>
+
+      <button id="restart">Restart Game</button>
+      <a href="../index.html" class="back-home">← Back to Home</a>
+    </div>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <script src="../js/guess_the_number.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memory Paint — Levels | CloudArcade</title>
+  <link rel="stylesheet" href="../css/memory_paint.css" />
+</head>
+<body>
+  <div class="background-shapes" id="floatingShapes"></div>
+
+  <div class="container">
+    <h1>🎨 Memory Paint — Level Mode</h1>
+    <p class="instructions">
+      You’ll see a color pattern for 5 seconds. Memorize it, then paint the same grid using the color palette. 
+      Get 80% or more correct to move to the next level!
+    </p>
+
+    <div class="progress-tracker" id="progressTracker"></div>
+
+    <div class="status-row">
+      <div id="levelDisplay">Level: 1 (1 × 2)</div>
+      <div id="previewMessage">Pattern disappears in: <span id="countdown">5</span>s</div>
+    </div>
+
+    <div id="grid" class="grid" aria-live="polite"></div>
+    <div id="palette" class="palette" aria-label="color palette"></div>
+
+    <div class="controls">
+      <button id="check">Check Result</button>
+      <button id="restart">Restart Level</button>
+      <button id="resetProgress">Reset Progress</button>
+      <a href="../index.html" class="back-home">← Back to Home</a>
+    </div>
+
+    <div id="result" class="result" role="status"></div>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <script src="../js/memory_paint.js"></script>
+</body>
+</html>

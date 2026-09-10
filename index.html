@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudArcade – Home</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>CloudArcade</h1>
+    <ul>
+      <li onclick="openModal('aboutModal')">About Project</li>
+      <li onclick="openModal('licenseModal')">License Info</li>
+      <li onclick="openModal('tcoModal')">TCO Presentation</li>
+      <li><a href="mailto:35757491@student.murdoch.edu.au" style="color:white; text-decoration:none;">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h2>🎮 Welcome to CloudArcade 🎮</h2>
+    <p>Play, Learn & Enjoy — A Collection of Fun Browser Games</p>
+  </header>
+
+  <!-- Games Section -->
+  <section class="games-container">
+    <div class="game-card">
+      <a href="games/tic_tac_toe.html">Tic Tac Toe</a>
+        <h2>Tic Tac Toe</h2>
+        <p>Challenge your friend or AI!</p>
+      </a>
+    </div>
+    <div class="game-card">
+      <a href="games/rps.html">Rock Paper Scissors</a>
+        <h2>Rock Paper Scissors</h2>
+        <p>The timeless game of luck and skill.</p>
+      </a>
+    </div>
+    <div class="game-card">
+      <a href="games/guess_the_number.html">Guess The Number</a>
+        <h2>Number Guess</h2>
+        <p>Can you guess the secret number?</p>
+      </a>
+    </div>
+    <div class="game-card">
+      <a href="games/memory.html">Memory Match</a>
+        <h2>Memory Match</h2>
+        <p>Test your short-term memory!</p>
+      </a>
+    </div>
+    <div class="game-card">
+      <a href="games/memory_paint.html">
+        <h2>Memory Paint</h2>
+        <p>See, remember, and recreate the image!</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Mohammed Affan Parkar — CloudArcade | Licensed under 
+    <a href="https://opensource.org/licenses/MIT" target="_blank" style="color:#fff;">MIT License</a>
+  </footer>
+
+  <!-- About Project Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('aboutModal')">&times;</span>
+      <h2>About the Project</h2>
+      <p>
+        The project is about a cloud-hosted website called “CloudArcade” that offers users access to a variety of entertaining and interactive minigames on a single online platform. The website features five browser-based games like Memory Match, Memory Paint, Number Guessing, Rock Paper Scissors, and Tic Tac Toe. Each game will be made using HTML, CSS, and JavaScript...
+      </p>
+    </div>
+  </div>
+
+  <!-- License Modal -->
+  <div id="licenseModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('licenseModal')">&times;</span>
+      <h2>License Description</h2>
+      <p>
+        This project uses the MIT License, as it permits other users to use, alter, and distribute the code while giving credit to the original author. The MIT License is simple to use, universally accepted, and suitable for most educational projects like the "CloudArcade" project...
+      </p>
+    </div>
+  </div>
+
+  <!-- TCO Presentation Modal -->
+  <div id="tcoModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('tcoModal')">&times;</span>
+      <h2>TCO Presentation</h2>
+      <p>View or download the full presentation below:</p>
+      <a href="ppt/Mohammed Affan TCO Presentation 35757491.pptx" download>📊 Download TCO Presentation</a>
+      <br><br>
+      <p><strong>Summary:</strong> CloudArcade compares Azure (IaaS) vs Squarespace (SaaS). Over 5 years, Azure costs $845 and Squarespace costs $1008. Azure provides better control and learning value, making it ideal for this project.</p>
+    </div>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

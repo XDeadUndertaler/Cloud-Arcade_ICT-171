@@ -1,0 +1,156 @@
+/* Animated Gradient + Floating Shapes */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #4B0082, #6A0DAD, #8A2BE2, #BA55D3);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+/* Floating shape container */
+.background-shapes span {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.4;
+  animation: float 10s linear infinite;
+  color: rgba(255,255,255,0.3);
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  width: 340px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+#player-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#startBtn, #resetBtn {
+  padding: 10px 15px;
+  background: #6A0DAD;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#startBtn:hover, #resetBtn:hover {
+  background: #8A2BE2;
+}
+
+.turn-text {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #FFD700;
+}
+
+/* Tic Tac Toe Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 8px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cell:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Highlight Winning Cells */
+.win {
+  background: #FFD700 !important;
+  color: black;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #FFD700; }
+  to { box-shadow: 0 0 25px #FFD700; }
+}
+
+/* Footer + Result */
+.result {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: #FFD700;
+}
+
+.back-btn {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #ddd;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #fff;
+}
+
+
+/* Winning highlight */
+.cell.win {
+  animation: winGlow 0.9s ease-in-out infinite;
+  box-shadow: 0 0 18px 6px rgba(255,215,0,0.6);
+}
+@keyframes winGlow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); box-shadow: 0 0 30px 10px rgba(255,215,0,0.85); }
+  100% { transform: scale(1); }
+}

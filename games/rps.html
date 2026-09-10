@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors | CloudArcade</title>
+  <link rel="stylesheet" href="../css/rps.css" />
+</head>
+<body>
+  <!-- Floating background -->
+  <div class="background-shapes" id="floatingShapes"></div>
+
+  <div class="container">
+    <h1>🎮 Rock Paper Scissors 🎮</h1>
+    <h2 id="status">Make Your Move!</h2>
+
+    <div class="choices">
+      <button class="choice" data-choice="rock">✊ Rock</button>
+      <button class="choice" data-choice="paper">✋ Paper</button>
+      <button class="choice" data-choice="scissors">✌️ Scissors</button>
+    </div>
+
+    <div class="arena">
+      <div class="player-side">
+        <h3>You</h3>
+        <div id="player-display" class="display">❓</div>
+      </div>
+      <div class="computer-side">
+        <h3>Computer</h3>
+        <div id="computer-display" class="display">❓</div>
+      </div>
+    </div>
+
+    <div class="results">
+      <h3 id="result"></h3>
+    </div>
+
+    <div class="scoreboard">
+      <p>Player Score: <span id="player-score">0</span></p>
+      <p>Computer Score: <span id="computer-score">0</span></p>
+    </div>
+
+    <button id="restart">Restart Game</button>
+    <a href="../index.html" class="back-home">← Back to Home</a>
+  </div>
+
+  <canvas id="confetti"></canvas>
+
+  <script src="../js/rps.js"></script>
+</body>
+</html>

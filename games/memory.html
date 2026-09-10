@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memory Match | CloudArcade</title>
+  <link rel="stylesheet" href="../css/memory.css" />
+</head>
+<body>
+  <div class="background-shapes" id="floatingShapes"></div>
+
+  <div class="container">
+    <h1>🧠 Memory Match 🧩</h1>
+
+    <!-- Difficulty Selection -->
+    <div id="difficultySelect" class="center-block">
+      <h3>Select Grid Size</h3>
+      <div class="diff-buttons">
+        <button data-size="4">4x4 (Easy)</button>
+        <button data-size="6">6x6 (Medium)</button>
+        <button data-size="8">8x8 (Hard)</button>
+      </div>
+    </div>
+
+    <!-- Game Area -->
+    <div id="gameArea" style="display:none;">
+      <div class="stats">
+        <p>Moves: <span id="moves">0</span></p>
+        <p>Time: <span id="time">0s</span></p>
+      </div>
+
+      <div id="grid" class="grid" aria-live="polite" role="grid"></div>
+
+      <div id="message" class="message"></div>
+
+      <div class="buttons">
+        <button id="restart">Back to Difficulty</button>
+        <a href="../index.html" class="back-home">← Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <script src="../js/memory.js"></script>
+</body>
+</html>
